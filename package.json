@@ -1,0 +1,33 @@
+{
+  "name": "parking-app-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/server.js",
+  "scripts": {
+    "prebuild": "eslint '**/*.{ts,tsx,js,jsx}'",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node ./dist/server.js",
+    "dev": "ts-node --project ./tsconfig.json ./src/server.ts",
+    "dev-watch": "nodemon ./src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-format": "prettier --check '**/*.{js,ts,tsx,md,json}'",
+    "format": "prettier --write '**/*.{js,ts,tsx,md,json}'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "nodemon": "^2.0.22",
+    "prettier": "2.8.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  }
+}
